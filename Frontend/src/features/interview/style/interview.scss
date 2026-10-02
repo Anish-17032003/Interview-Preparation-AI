@@ -59,6 +59,11 @@ $severity-low: #3fb950;
     justify-content: space-between;
     gap: 0.25rem;
 
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
 
 
@@ -475,5 +480,126 @@ $severity-low: #3fb950;
         color: $severity-low;
         background-color: rgba($severity-low, 0.1);
         border-color: rgba($severity-low, 0.25);
+    }
+}
+
+@media (max-width: 800px) {
+    .interview-page {
+        min-height: 100dvh;
+        padding: 0.5rem;
+    }
+
+    .interview-layout {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.65rem;
+        min-width: 0;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .interview-nav {
+        display: contents;
+    }
+
+    .nav-content,
+    .interview-content,
+    .interview-sidebar {
+        min-width: 0;
+        background-color: $bg-card;
+        border: 1px solid $border-color;
+        border-radius: 0.75rem;
+    }
+
+    .nav-content {
+        order: 1;
+        padding: 0.75rem;
+    }
+
+    .interview-nav__label {
+        padding: 0 0.25rem;
+    }
+
+    .interview-nav__item {
+        min-height: 2.5rem;
+    }
+
+    .interview-nav__actions {
+        order: 4;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0 0.125rem;
+
+        button {
+            width: 100%;
+            min-height: 2.75rem;
+            white-space: nowrap;
+        }
+    }
+
+    .interview-divider {
+        display: none;
+    }
+
+    .interview-content {
+        order: 2;
+        flex: initial;
+        max-height: none;
+        overflow: visible;
+        padding: 1rem 0.85rem;
+    }
+
+    .content-header {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.85rem;
+        padding-bottom: 0.75rem;
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        &__count {
+            font-size: 0.75rem;
+        }
+    }
+
+    .q-list {
+        gap: 0.5rem;
+    }
+
+    .q-card__header {
+        align-items: center;
+        gap: 0.65rem;
+        padding: 0.75rem;
+    }
+
+    .q-card__question {
+        min-width: 0;
+        font-size: 0.85rem;
+        overflow-wrap: anywhere;
+    }
+
+    .interview-sidebar {
+        order: 3;
+        width: auto;
+        padding: 1rem 0.85rem;
+        gap: 1rem;
+    }
+
+    .skill-gaps__list {
+        flex-direction: column;
+    }
+
+    .skill-tag {
+        width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .roadmap-day__header {
+        flex-wrap: wrap;
     }
 }
