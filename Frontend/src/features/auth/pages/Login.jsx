@@ -17,6 +17,7 @@ const Login = () => {
         try{
             await handleLogin({email,password})
             navigate('/')
+            toast.success("Logged in successfully");
         }catch(err){
             toast.error(err.response?.data?.message || "Invalid credentials")
         }

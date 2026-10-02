@@ -3,6 +3,8 @@ import "../style/home.scss"
 import { useInterview } from '../hooks/useInterview.js'
 import { useNavigate } from 'react-router'
 import { useAuth } from '../../auth/hooks/useAuth.js'
+import { toast } from 'react-toastify'
+
 
 
 const Home = () => {
@@ -23,6 +25,7 @@ const Home = () => {
     const handleLogoutt= async ()=>{
         await handleLogout();
         navigate('/login');
+        toast.success("Logged out successfully");
 
     }
 
