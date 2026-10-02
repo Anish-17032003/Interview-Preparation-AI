@@ -3,6 +3,7 @@ import '../style/interview.scss'
 import { useInterview } from '../hooks/useInterview.js'
 import { useNavigate, useParams } from 'react-router'
 import { useAuth } from '../../auth/hooks/useAuth.js'
+import {toast} from "react-toastify";
 
 
 
@@ -68,6 +69,7 @@ const Interview = () => {
     const handleLogoutt= async ()=>{
         await handleLogout();
         navigate('/login');
+        toast.success("Logged out successfully");
     }
 
     useEffect(() => {
